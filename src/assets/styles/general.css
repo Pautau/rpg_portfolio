@@ -4,7 +4,7 @@
 */
 @font-face {
     font-family: 'kingthings_petrockregular';
-    src: url('font/kingthingspetrock_regular_macroman/Kingthings_Petrock-webfont.woff') format('woff');
+    src: url('../fonts/kingthingspetrock_regular_macroman/Kingthings_Petrock-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -28,7 +28,7 @@ body:after {
     content: "";
     z-index: -5;
 
-    background-image: url('img/background/bg.jpg');
+    background-image: url('../images/background/bg.jpg');
     background-position: center;
     background-size: cover;
     filter: blur(8px);
@@ -51,7 +51,7 @@ body:after {
       "character informations"; 
 
     box-sizing: border-box;
-    background: url('img/background/bg_menu.png');
+    background: url('../images/background/bg_menu.png');
     background-size: cover;
 
     padding: 5px;
@@ -113,7 +113,7 @@ body:after {
     grid-area: character;
 
     background-color: red;
-    background: url('img/character.png'), url('img/background/bg.jpg');
+    background: url('../images/character.png'), url('../images/background/bg.jpg');
     background-position: center, left;
     background-size: cover;
 
@@ -147,7 +147,7 @@ body:after {
 
     display: grid;
 
-    background: url('img/background/bg_information.png');
+    background: url('../images/background/bg_information.png');
     background-size: cover;
 
     padding: 0.4rem;
@@ -168,7 +168,7 @@ body:after {
     }
 
     .informations {
-        background: url('img/character2.png'), url('img/background/bg_information.png');
+        background: url('../images/character2.png'), url('../images/background/bg_information.png');
         background-position: center;
         background-size: cover;
     }

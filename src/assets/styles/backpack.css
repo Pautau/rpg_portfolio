@@ -17,6 +17,7 @@
     position: relative;
 
     border: #14141400 1px solid;
+    cursor: pointer;
 
     width: 5rem;
     height: 5rem;
@@ -33,7 +34,7 @@
 
 
     box-shadow: inset 5px 5px 10px rgba(58, 31, 15, 0.5);
-    background: url("img/background/bg_slot2.png"), url("img/background/bg_information.png");
+    background: url("../images/background/bg_slot2.png"), url("../images/background/bg_information.png");
     background-position: left;
 
     margin: 3px;
@@ -43,20 +44,26 @@
     border: #141414 1px solid;
 }
 
-.slot[data-rarity="rare"]:hover,
-.star_rarity[data-rarity="rare"] {
+
+.slot[data-rarity="4"]:hover,
+.star_rarity[data-rarity="4"] {
+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));}
+
+
+.slot[data-rarity="3"]:hover,
+.star_rarity[data-rarity="3"] {
     background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
         radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
 
-.slot[data-rarity="uncommon"]:hover,
-.star_rarity[data-rarity="uncommon"] {
-    background: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+.slot[data-rarity="2"]:hover,
+.star_rarity[data-rarity="2"] {
+    background-image: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
 }
 
-.slot[data-rarity="common"]:hover,
-.star_rarity[data-rarity="common"] {
-    background: linear-gradient(45deg, #662E00, #D47800)
+.slot[data-rarity="1"]:hover,
+.star_rarity[data-rarity="1"] {
+    background-image: linear-gradient(45deg, #662E00, #D47800)
 }
 
 .slot i {
@@ -76,12 +83,13 @@
 
     position: relative;
 
-    background: url("img/background/bg_menu.png");
+    background: url("../images/background/bg_menu.png");
     background-position: left;
     box-sizing: border-box;
+    text-align: center;
 
     padding: 25px 20px;
-    min-height: 5rem;
+    min-height: 6rem;
     width: fit-content;
 }
 
@@ -95,7 +103,7 @@
 
 
     box-shadow: inset 5px 5px 10px rgba(58, 31, 15, 0.5);
-    background: url("img/background/bg_slot2.png"), url("img/background/bg_information.png");
+    background: url("../images/background/bg_slot2.png"), url("../images/background/bg_information.png");
     background-position: left;
 
     margin: 5px;

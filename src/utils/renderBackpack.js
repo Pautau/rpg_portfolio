@@ -1,11 +1,18 @@
-/* créer des enum pour la rareté. rare : 3 (for number of stars)*/
+/* Number of stars per rarity */
+const Rarity = {
+    COMMON: 1,
+    UNCOMMON: 2,
+    RARE: 3,
+}
+
+// TODO: Might limit backpack's slot to 9
 const backpack = [
     {
         name: "Kitten",
         quote: "Who would even bring a cat to work?",
         stats: "-1 focus, +2 cuteness",
         image: '<i class="fa-solid fa-cat"></i>',
-        rarity: "rare"
+        rarity: Rarity.RARE
     }
 ]
 
