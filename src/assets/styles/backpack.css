@@ -15,7 +15,7 @@
     justify-content: center;
 
     position: relative;
-
+    
     border: #14141400 1px solid;
     cursor: pointer;
 
@@ -44,25 +44,26 @@
     border: #141414 1px solid;
 }
 
-
 .slot[data-rarity="4"]:hover,
-.star_rarity[data-rarity="4"] {
-    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));}
+.rarity i[data-rarity="4"] {
+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+}
 
 
 .slot[data-rarity="3"]:hover,
-.star_rarity[data-rarity="3"] {
+.rarity i[data-rarity="3"] {
     background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background-size: 150% 125%;
 }
 
 .slot[data-rarity="2"]:hover,
-.star_rarity[data-rarity="2"] {
+.rarity i[data-rarity="2"], .selectedDefault {
     background-image: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
 }
 
 .slot[data-rarity="1"]:hover,
-.star_rarity[data-rarity="1"] {
+.rarity i[data-rarity="1"] {
     background-image: linear-gradient(45deg, #662E00, #D47800)
 }
 
@@ -75,11 +76,15 @@
 
 /* TOOLTIP */
 
+.red {
+    background-color: red;
+}
+
 .tooltip {
     display: flex;
     align-self: flex-end;
-    justify-content: center;
     justify-self: center;
+    align-items: center;
 
     position: relative;
 
@@ -120,7 +125,7 @@
     display: flex;
 }
 
-.star_rarity {
+.rarity i {
     background-clip: text;
     filter: drop-shadow(1px 1px 1px #000000);
 
