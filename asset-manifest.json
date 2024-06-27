@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.891fac1e.css",
-    "main.js": "/portfolio/static/js/main.4679e822.js",
-    "static/js/453.fd123c19.chunk.js": "/portfolio/static/js/453.fd123c19.chunk.js",
-    "static/media/bg.jpg": "/portfolio/static/media/bg.feedee0ba89fa534ed2c.jpg",
-    "static/media/bg_menu.png": "/portfolio/static/media/bg_menu.46a0a901c87f0022fe99.png",
-    "static/media/bg_slot2.png": "/portfolio/static/media/bg_slot2.d724e173b0e15645a4be.png",
-    "static/media/bg_information.png": "/portfolio/static/media/bg_information.01d1112ec251b8a22dd3.png",
-    "static/media/character2.png": "/portfolio/static/media/character2.df0f2096b70f38875531.png",
-    "static/media/character.png": "/portfolio/static/media/character.c6bab7f797d7c03ec08c.png",
-    "static/media/Kingthings_Petrock-webfont.woff": "/portfolio/static/media/Kingthings_Petrock-webfont.5a54f09f67b1511f0c86.woff",
-    "index.html": "/portfolio/index.html",
-    "main.891fac1e.css.map": "/portfolio/static/css/main.891fac1e.css.map",
-    "main.4679e822.js.map": "/portfolio/static/js/main.4679e822.js.map",
-    "453.fd123c19.chunk.js.map": "/portfolio/static/js/453.fd123c19.chunk.js.map"
+    "main.css": "/rpg_portfolio/static/css/main.76ee9439.css",
+    "main.js": "/rpg_portfolio/static/js/main.f185c2dd.js",
+    "static/js/453.fd123c19.chunk.js": "/rpg_portfolio/static/js/453.fd123c19.chunk.js",
+    "static/media/bg.jpg": "/rpg_portfolio/static/media/bg.feedee0ba89fa534ed2c.jpg",
+    "static/media/bg_menu.png": "/rpg_portfolio/static/media/bg_menu.46a0a901c87f0022fe99.png",
+    "static/media/bg_slot2.png": "/rpg_portfolio/static/media/bg_slot2.d724e173b0e15645a4be.png",
+    "static/media/bg_information.png": "/rpg_portfolio/static/media/bg_information.01d1112ec251b8a22dd3.png",
+    "static/media/character2.png": "/rpg_portfolio/static/media/character2.df0f2096b70f38875531.png",
+    "static/media/character.png": "/rpg_portfolio/static/media/character.c6bab7f797d7c03ec08c.png",
+    "static/media/Kingthings_Petrock-webfont.woff": "/rpg_portfolio/static/media/Kingthings_Petrock-webfont.5a54f09f67b1511f0c86.woff",
+    "index.html": "/rpg_portfolio/index.html",
+    "main.76ee9439.css.map": "/rpg_portfolio/static/css/main.76ee9439.css.map",
+    "main.f185c2dd.js.map": "/rpg_portfolio/static/js/main.f185c2dd.js.map",
+    "453.fd123c19.chunk.js.map": "/rpg_portfolio/static/js/453.fd123c19.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.891fac1e.css",
-    "static/js/main.4679e822.js"
+    "static/css/main.76ee9439.css",
+    "static/js/main.f185c2dd.js"
   ]
 }
