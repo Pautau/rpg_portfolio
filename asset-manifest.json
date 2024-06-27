@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.41ccc70b.css",
+    "main.js": "/react-gh-pages/static/js/main.b98d4cc1.js",
+    "static/js/453.fd123c19.chunk.js": "/react-gh-pages/static/js/453.fd123c19.chunk.js",
+    "static/media/bg.jpg": "/react-gh-pages/static/media/bg.feedee0ba89fa534ed2c.jpg",
+    "static/media/bg_menu.png": "/react-gh-pages/static/media/bg_menu.46a0a901c87f0022fe99.png",
+    "static/media/bg_slot2.png": "/react-gh-pages/static/media/bg_slot2.d724e173b0e15645a4be.png",
+    "static/media/bg_information.png": "/react-gh-pages/static/media/bg_information.01d1112ec251b8a22dd3.png",
+    "static/media/character2.png": "/react-gh-pages/static/media/character2.df0f2096b70f38875531.png",
+    "static/media/character.png": "/react-gh-pages/static/media/character.c6bab7f797d7c03ec08c.png",
+    "static/media/Kingthings_Petrock-webfont.woff": "/react-gh-pages/static/media/Kingthings_Petrock-webfont.5a54f09f67b1511f0c86.woff",
+    "index.html": "/react-gh-pages/index.html",
+    "main.41ccc70b.css.map": "/react-gh-pages/static/css/main.41ccc70b.css.map",
+    "main.b98d4cc1.js.map": "/react-gh-pages/static/js/main.b98d4cc1.js.map",
+    "453.fd123c19.chunk.js.map": "/react-gh-pages/static/js/453.fd123c19.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41ccc70b.css",
+    "static/js/main.b98d4cc1.js"
+  ]
+}
