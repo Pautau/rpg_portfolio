@@ -1,0 +1,62 @@
+/* --- PASSIVES SECTION --- */
+
+.passive {
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    color: antiquewhite;
+
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.passive:hover {
+    transition: background-color 0.5s;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.positive {
+    color: rgb(42, 165, 83);
+}
+
+.negative {
+    color: rgb(197, 32, 32);
+}
+
+.passive .name {
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word;
+
+    width: 25%;
+}
+
+.passive .details {
+    font-size: 0.6rem;
+    word-wrap: break-word;
+}
+
+/* Téléphones Mobiles (jusqu'à 600px) */
+@media (max-width: 600px) {
+    .passive {
+        background-color: #000000d8;
+    }
+}
+
+@media (max-width: 1024px) {
+    .passive {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        padding: 4px;
+    }
+
+    .passive .name {
+        margin-bottom: 4px;
+        width: 100%;
+    }
+}

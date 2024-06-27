@@ -1,0 +1,201 @@
+/*
+    > CREDITS: 
+    Background image: https://www.deviantart.com/peyop/art/Library-181380813
+*/
+@font-face {
+    font-family: 'kingthings_petrockregular';
+    src: url('font/kingthingspetrock_regular_macroman/Kingthings_Petrock-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', Geneva, Verdana, sans-serif;
+    background-color: black;
+
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+body:after {
+    content: "";
+    z-index: -5;
+
+    background-image: url('img/background/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: blur(8px);
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.content {
+    /* grid.layoutit.com?id=gWXKDhG */
+    display: grid; 
+    grid-template-columns: 0.6fr 1.4fr; 
+    grid-template-rows: 0.2fr 1.8fr; 
+    gap: 5px 5px; 
+    grid-template-areas: 
+      "title menu"
+      "character informations"; 
+
+    box-sizing: border-box;
+    background: url('img/background/bg_menu.png');
+    background-size: cover;
+
+    padding: 5px;
+    width: 1000px;
+    max-width: 95vw;
+    height: 600px;
+}
+
+.title {
+    grid-area: title;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'kingthings_petrockregular', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.356);
+    color: antiquewhite;
+
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    grid-area: menu;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.356);
+    color: antiquewhite;
+
+    padding: 0 10vw;
+}
+
+.menu p {
+    font-size: 1.1rem;
+    text-align: center;
+    align-self: center;
+
+    min-width: 50px;
+}
+
+.menu i {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.menu i:hover {
+    font-size: 1.5rem;
+    vertical-align: baseline;
+    transition: all 0.2s;
+}
+
+.character {
+    grid-area: character;
+
+    background-color: red;
+    background: url('img/character.png'), url('img/background/bg.jpg');
+    background-position: center, left;
+    background-size: cover;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.light {   
+    background: radial-gradient(circle, rgba(0, 195, 255, 0.247) 0%, rgba(150,150,150,0) 100%);
+    animation: glow 4s 0s infinite alternate;
+
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.informations {
+    grid-area: informations;
+
+    display: grid;
+
+    background: url('img/background/bg_information.png');
+    background-size: cover;
+
+    padding: 0.4rem;
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* Téléphones Mobiles (jusqu'à 600px) */
+@media (max-width: 600px) {
+    .content {
+        grid-template-areas:
+        "menu menu"
+        "informations informations";
+    }
+
+    .character, .title {
+        display: none;
+    }
+
+    .informations {
+        background: url('img/character2.png'), url('img/background/bg_information.png');
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/* Tablettes (600px à 768px) */
+@media (max-width: 768px) {
+
+}
+
+/* Petits Écrans d'Ordinateurs Portables (768px à 1024px) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 19px; /* Augmente la taille de la police */
+    }
+}
+
+/* Écrans d'Ordinateurs de Bureau (1024px à 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    html {
+        font-size: 20px; /* Augmente encore la taille de la police */
+    }
+}
+
+/* Grands Écrans (au-dessus de 1440px) */
+@media (min-width: 1440px) {
+    html {
+        font-size: 20px; /* Taille de police plus grande pour grands écrans */
+    }
+}

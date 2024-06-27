@@ -1,0 +1,167 @@
+.backpack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.slot {
+    display: flex;
+    z-index: 4;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    border: #14141400 1px solid;
+
+    width: 5rem;
+    height: 5rem;
+}
+
+.slot::after {
+    content: "";
+    z-index: 5;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+
+    box-shadow: inset 5px 5px 10px rgba(58, 31, 15, 0.5);
+    background: url("img/background/bg_slot2.png"), url("img/background/bg_information.png");
+    background-position: left;
+
+    margin: 3px;
+}
+
+.slot:hover {
+    border: #141414 1px solid;
+}
+
+.slot[data-rarity="rare"]:hover,
+.star_rarity[data-rarity="rare"] {
+    background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+
+.slot[data-rarity="uncommon"]:hover,
+.star_rarity[data-rarity="uncommon"] {
+    background: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+}
+
+.slot[data-rarity="common"]:hover,
+.star_rarity[data-rarity="common"] {
+    background: linear-gradient(45deg, #662E00, #D47800)
+}
+
+.slot i {
+    z-index: 6;
+
+    font-size: 2.5rem;
+    color: #180e09;
+}
+
+/* TOOLTIP */
+
+.tooltip {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    justify-self: center;
+
+    position: relative;
+
+    background: url("img/background/bg_menu.png");
+    background-position: left;
+    box-sizing: border-box;
+
+    padding: 25px 20px;
+    min-height: 5rem;
+    width: fit-content;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+
+    box-shadow: inset 5px 5px 10px rgba(58, 31, 15, 0.5);
+    background: url("img/background/bg_slot2.png"), url("img/background/bg_information.png");
+    background-position: left;
+
+    margin: 5px;
+}
+
+.tooltip .rarity {
+    z-index: 6;
+
+    position: absolute;
+    left: 50%;
+    top: -0.55rem;
+    transform: translate(-50%, 0);
+
+    display: flex;
+}
+
+.star_rarity {
+    background-clip: text;
+    filter: drop-shadow(1px 1px 1px #000000);
+
+    color: transparent;
+    font-size: 1.1rem;
+}
+
+.info_tooltip {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.title_tooltip {
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    margin-bottom: 5px;
+}
+
+.quote_tooltip {
+    font-style: italic;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.stats_tooltip {
+    font-size: 0.8rem;
+}
+
+.stats_tooltip span{
+    text-shadow: #000000 0px 0px 3px;
+}
+
+/* Téléphones Mobiles (jusqu'à 600px) */
+@media (max-width: 600px) {}
+
+
+/* --- MEDIA QUERIES --- */
+/* Tablettes (600px à 768px) */
+@media (max-width: 768px) {}
+
+/* Petits Écrans d'Ordinateurs Portables (768px à 1024px) */
+@media (max-width: 1024px) {}
+
+/* Écrans d'Ordinateurs de Bureau (1024px à 1440px) */
+@media (min-width: 1024px) and (max-width: 1440px) {}
+
+/* Grands Écrans (au-dessus de 1440px) */
+@media (min-width: 1440px) {}
