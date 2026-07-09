@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rpg_portfolio/static/css/main.7379eb25.css",
-    "main.js": "/rpg_portfolio/static/js/main.2b46d054.js",
+    "main.js": "/rpg_portfolio/static/js/main.094c5bf5.js",
     "static/js/453.8a12bddb.chunk.js": "/rpg_portfolio/static/js/453.8a12bddb.chunk.js",
     "static/media/bg3.png": "/rpg_portfolio/static/media/bg3.d34ed514cc4a1346d8dc.png",
     "static/media/bg_menu.png": "/rpg_portfolio/static/media/bg_menu.46a0a901c87f0022fe99.png",
@@ -10,11 +10,11 @@
     "static/media/Kingthings_Petrock-webfont.woff": "/rpg_portfolio/static/media/Kingthings_Petrock-webfont.5a54f09f67b1511f0c86.woff",
     "index.html": "/rpg_portfolio/index.html",
     "main.7379eb25.css.map": "/rpg_portfolio/static/css/main.7379eb25.css.map",
-    "main.2b46d054.js.map": "/rpg_portfolio/static/js/main.2b46d054.js.map",
+    "main.094c5bf5.js.map": "/rpg_portfolio/static/js/main.094c5bf5.js.map",
     "453.8a12bddb.chunk.js.map": "/rpg_portfolio/static/js/453.8a12bddb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7379eb25.css",
-    "static/js/main.2b46d054.js"
+    "static/js/main.094c5bf5.js"
   ]
 }
