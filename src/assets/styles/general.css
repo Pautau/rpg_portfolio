@@ -46,20 +46,6 @@ body:after {
     animation: zoom 2s 0s forwards
 }
 
-/* TODO : remove after finishing the development */
-.dev {
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    color: transparent;
-    background-clip: text;
-    background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-    background-size: 200% 200%;
-}
-
 .content {
     /* grid.layoutit.com?id=gWXKDhG */
     display: grid; 
@@ -77,7 +63,7 @@ body:after {
     padding: 5px;
     width: 1000px;
     max-width: 95vw;
-    height: 600px;
+    height: 700px;
 }
 
 .title {
@@ -110,7 +96,8 @@ body:after {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    align-content: center;
+    gap: 3rem;
     flex-wrap: wrap;
 
     background-color: rgba(0, 0, 0, 0.356);
@@ -156,20 +143,25 @@ body:after {
     height: 100%;
 
     animation: entrance 3s 0s forwards ease-out;
+    transition: background-position 0.2s ease-out;
+}
+
+.character.entrance-done {
+    animation: none;
 }
 
 @keyframes entrance {
     0% {
-        background-position: right, 175% 175%;
+        background-position: right 175%;
     }
     100% {
-        background-position: center, 125% 125%;
+        background-position: center 50%;
     }
 }
 
 .light {   
-    background: radial-gradient(circle, rgba(255, 230, 0, 0.815) 0%, rgba(150,150,150,0) 100%);
-    animation: glow 4s 0s infinite alternate;
+    background: radial-gradient(circle, rgba(255, 251, 0, 0.4) 0%, rgba(150,150,150,0) 100%);
+    animation: glow 8s 0s infinite alternate;
 
     width: 100%;
     height: 100%;
@@ -177,13 +169,13 @@ body:after {
 
 @keyframes glow {
     0% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
     50% {
-        opacity: 0.4;
+        opacity: 0.7;
     }
     100% {
-        opacity: 0.1;
+        opacity: 0.2;
     }
 }
 
@@ -234,7 +226,23 @@ body:after {
 
 /* Téléphones Mobiles (jusqu'à 600px) */
 @media (max-width: 600px) {
+    html {
+        font-size: 18px; /* Plus lisible sans avoir à zoomer */
+    }
+
+    body {
+        height: 100vh;
+        height: 100dvh; /* tient compte de la barre d'adresse mobile */
+    }
+
     .content {
+        width: 100%;
+        max-width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
+
+        grid-template-rows: auto 1fr;
         grid-template-areas:
         "menu menu"
         "informations informations";
@@ -242,6 +250,22 @@ body:after {
 
     .character, .title {
         display: none;
+    }
+
+    .menu {
+        gap: 0.6rem 1.5rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .menu p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .informations {
+        background: url('../images/background/bg_information.png');
+        background-position: center;
+        background-size: cover;
     }
 }
 

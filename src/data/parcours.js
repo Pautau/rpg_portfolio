@@ -2,9 +2,20 @@
 /* status: "completed" (quête terminée) ou "ongoing" (quête en cours) */
 export const parcours = [
     {
+        date: "2020 – 2021",
+        title: "BAC +2 Développement Web / Web Mobile — AFPA",
+        description: "Une année de formation intensive pour apprendre les bases du développement web et mobile.",
+        status: "completed",
+        info: {
+            intro: "Une formation d'un an à l'AFPA qui m'a permis de poser les bases du développement web et mobile, entre intégration, algorithmique et bases de données, avant de continuer en alternance.",
+            features: [],
+            stack: ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "React Native", "SQL", "PHP", "Symfony"]
+        }
+    },
+    {
         date: "2021 – 2023",
-        title: "Alternance développeur full-stack — MovingLab",
-        description: "Deux ans en alternance à travailler avec React / Node.js, BAC +4 obtenus auprès de l'école ENI.",
+        title: "BAC+4, Alternance Dév. Full-Stack — MovingLab",
+        description: "Deux ans en alternance à travailler avec React / Node.js, BAC +4 obtenu auprès de l'école ENI.",
         status: "completed",
         info: {
             intro: "Mobilio est une application SaaS de gestion de déménagement pour professionnels, elle permet aux déménageurs de gérer leur emplois du temps, créer des devis, suivre l'état d'un déménagement et optimiser leurs trajets.",
@@ -19,7 +30,7 @@ export const parcours = [
                     title: "API Rest sécurisée",
                     text: "Utilisation d'Express.js avec des middlewares d'authentification."
                 },
-                                {
+                {
                     icon: "fas fa-list-check",
                     title: "Création de formulaires sécurisés",
                     text: "Mise en place de formulaires complexes avec validation front/back à l'aide de Yup et Validator."
@@ -51,6 +62,38 @@ export const parcours = [
                 },
             ],
             stack: ["Node.js", "React", "MongoDB", "Express.js", "Material UI", "Jest", "Cypress", "Gitlab"]
+        }
+    },
+    {
+        date: "Il y a quelques mois",
+        title: "Ce portfolio",
+        description: "Ce portfolio a été développé avec React.",
+        status: "completed",
+        info: {
+            intro: "Ce portfolio est pensé comme une fiche de présentation de personnage plutôt qu'un CV classique.",
+            features: [
+                {
+                    icon: "fab fa-react",
+                    title: "React",
+                    text: "Un composant par onglet, données séparées de l'affichage."
+                },
+                {
+                    icon: "fas fa-folder",
+                    title: "Organisation",
+                    text: "Arborescence des dossiers clairement organisée (voir sur mon repo Github)."
+                },
+                {
+                    icon: "fas fa-mobile-screen",
+                    title: "Responsive",
+                    text: "Mise en page adaptée du desktop au mobile, avec des ajustements spécifiques par taille d'écran."
+                },
+                {
+                    icon: "fas fa-palette",
+                    title: "Design sur mesure",
+                    text: "Thème fait main en CSS pur : dégradés or, ombres portées, police médiévale, sans librairie de composants (les icônes viennent de FontAwesome)."
+                }
+            ],
+            stack: ["React", "CSS3", "Font Awesome"]
         }
     },
     {

@@ -6,13 +6,13 @@ import { inventory } from '../data/inventory.js';
 
 function Backpack() {
     const [selectedDefault, setSelectedDefault] = useState(true)
-    const [tooltipData, setTooltipData] = useState({
-        name: "Laptop",
-        quote: "Your trusty companion for turning coffee into code",
-        stats: "Allows the user to code",
-        image: "fas fa-laptop",
-        rarity: 2
-    });
+    const [tooltipData, setTooltipData] = useState(    {
+            name: "Café",
+            quote: "La seule véritable source d'énergie des développeurs",
+            stats: "+10 en debug, +5 en concentration",
+            image: "fas fa-coffee",
+            rarity: 4
+        });
 
     const showTooltip = (event) => {
         setSelectedDefault(false)
@@ -29,8 +29,8 @@ function Backpack() {
     const hideTooltip = () => {
         setTooltipData(
             {
-                name: "Please,",
-                quote: "select an item",
+                name: "",
+                quote: "Choisissez un objet.",
                 rarity: "",
                 stats: "",
             });

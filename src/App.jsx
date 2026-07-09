@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './assets/styles/general.css';
 import './assets/styles/reset.css';
 import Backpack from './components/backpack';
@@ -8,11 +8,32 @@ import Parcours from './components/parcours';
 import About from './components/about';
 
 function App() {
-    const [selectedMenu, setSelectedMenu] = useState('Backpack');
+    const [selectedMenu, setSelectedMenu] = useState('About');
+    const [entranceDone, setEntranceDone] = useState(false);
+    const backgroundRef = useRef(null);
+
+    const handleBackgroundMouseMove = (event) => {
+        if (!entranceDone || !backgroundRef.current) return;
+
+        const rect = backgroundRef.current.getBoundingClientRect();
+        const relX = (event.clientX - rect.left) / rect.width;
+        const relY = (event.clientY - rect.top) / rect.height;
+
+        const amplitude = 100;
+        const offsetX = 50 + (relX - 0.5) * amplitude;
+        const offsetY = 50 + (relY - 0.5) * amplitude;
+
+        backgroundRef.current.style.backgroundPosition = `${offsetX}% ${offsetY}%`;
+    };
+
+    const handleBackgroundMouseLeave = () => {
+        if (backgroundRef.current) {
+            backgroundRef.current.style.backgroundPosition = '50% 50%';
+        }
+    };
 
     return (
         <div className="container">
-            <p className='dev'> CURRENTLY IN DEVELOPMENT </p>
             <div className="content">
                 <div className="title">
                     <p>Florian's Portfolio</p>
@@ -34,7 +55,13 @@ function App() {
                     {/* <p className={selectedMenu === 'Passives' ? 'active' : ''}
                         onClick={() => setSelectedMenu('Passives')}>Passives</p> */}
                 </div>
-                <div className="character">
+                <div
+                    className={`character${entranceDone ? ' entrance-done' : ''}`}
+                    ref={backgroundRef}
+                    onAnimationEnd={() => setEntranceDone(true)}
+                    onMouseMove={handleBackgroundMouseMove}
+                    onMouseLeave={handleBackgroundMouseLeave}
+                >
                     <div className="light"></div>
                 </div>
                 <div className="informations">

@@ -3,6 +3,7 @@ import { Rarity } from '../enums/rarity.js';
 /* Items in inventory */
 export const inventory = [
     {
+        default: true,
         name: "Café",
         quote: "La seule véritable source d'énergie des développeurs",
         stats: "+10 en debug, +5 en concentration",
@@ -31,7 +32,6 @@ export const inventory = [
         rarity: Rarity.UNCOMMON
     },
     {
-        default: true,
         name: "Ordinateur portable",
         quote: "Ton fidèle compagnon pour transformer du café en code",
         stats: "Permet à l'utilisateur de développer",

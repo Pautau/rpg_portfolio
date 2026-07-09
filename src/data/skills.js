@@ -27,7 +27,7 @@ export const skills = [
         rarity: Rarity.UNCOMMON
     },
     {
-        name: "PostgreSQL / Supabase",
+        name: "PostgreSQL / MongoDB",
         stats: "",
         image: "fas fa-database",
         rarity: Rarity.UNCOMMON

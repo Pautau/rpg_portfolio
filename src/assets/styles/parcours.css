@@ -83,7 +83,7 @@
 }
 
 .parcours-node i {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #180e09;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .parcours-date {
-    font-size: 0.7rem;
+    font-size: 0.62rem;
     font-style: italic;
     color: antiquewhite;
     opacity: 0.75;
@@ -105,14 +105,14 @@
 .parcours-title {
     margin: 0.15rem 0;
     font-weight: bold;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: antiquewhite;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .parcours-desc {
     margin: 0;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     color: antiquewhite;
     opacity: 0.85;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
@@ -132,7 +132,7 @@
     padding: 0.15rem 0.6rem;
     border-radius: 3px;
 
-    font-size: 0.65rem;
+    font-size: 0.58rem;
     text-transform: uppercase;
     letter-spacing: 0.03em;
 
@@ -151,7 +151,7 @@
     border-radius: 3px;
     padding: 0.15rem 0.6rem;
 
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-family: inherit;
     color: antiquewhite;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
@@ -166,7 +166,7 @@
 }
 
 .parcours-info-btn i {
-    font-size: 0.75rem;
+    font-size: 0.68rem;
 }
 
 /* --- POP-UP --- */
@@ -225,7 +225,7 @@
     border: none;
     cursor: pointer;
 
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: antiquewhite;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
@@ -237,7 +237,7 @@
 .parcours-modal-title {
     margin: 0 1.5rem 0.7rem 0;
     font-family: 'kingthings_petrockregular', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     color: transparent;
     background-clip: text;
@@ -249,7 +249,7 @@
 
 .parcours-modal-text {
     margin: 0;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     line-height: 1.5;
     color: antiquewhite;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
@@ -257,7 +257,7 @@
 
 .parcours-modal-intro {
     margin: 0 0 1rem 0;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-style: italic;
     line-height: 1.5;
     color: antiquewhite;
@@ -294,7 +294,7 @@
 }
 
 .parcours-feature-icon i {
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: rgb(253, 185, 49);
     filter: drop-shadow(1px 1px 1px #000000);
 }
@@ -302,14 +302,14 @@
 .parcours-feature-title {
     margin: 0;
     font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: antiquewhite;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
 
 .parcours-feature-desc {
     margin: 0.1rem 0 0 0;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     line-height: 1.4;
     color: antiquewhite;
     opacity: 0.85;
@@ -331,7 +331,7 @@
     border: 1px solid rgba(138, 110, 47, 0.6);
     background-color: rgba(0, 0, 0, 0.35);
 
-    font-size: 0.68rem;
+    font-size: 0.62rem;
     color: antiquewhite;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
 }
@@ -339,10 +339,10 @@
 /* --- MEDIA QUERIES --- */
 @media (max-width: 600px) {
     .parcours-title {
-        font-size: 0.85rem;
+        font-size: 0.78rem;
     }
 
     .parcours-desc {
-        font-size: 0.75rem;
+        font-size: 0.68rem;
     }
 }
