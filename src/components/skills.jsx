@@ -23,7 +23,6 @@ function Skills() {
                                 style={{ width: `${(skill.rarity / 4) * 100}%` }}
                             ></div>
                         </div>
-                        <p className="skill-desc">{skill.stats}</p>
                     </div>
                 </div>
             ))}

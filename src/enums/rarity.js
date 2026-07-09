@@ -1,4 +1,3 @@
-/* Number of stars per rarity */
 export const Rarity = {
     COMMON: 1,
     UNCOMMON: 2,
@@ -6,10 +5,9 @@ export const Rarity = {
     EPIC: 4,
 }
 
-/* Labels lisibles, utilisés notamment pour les niveaux de maîtrise (Skills) */
 export const RarityLabel = {
-    [Rarity.COMMON]: "Débutant",
-    [Rarity.UNCOMMON]: "Intermédiaire",
-    [Rarity.RARE]: "Avancé",
-    [Rarity.EPIC]: "Expert",
+    [Rarity.COMMON]: "Pratique rare",
+    [Rarity.UNCOMMON]: "Pratique moyenne",
+    [Rarity.RARE]: "Pratique régulière",
+    [Rarity.EPIC]: "Pratique systématique",
 }

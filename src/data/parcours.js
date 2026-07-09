@@ -1,5 +1,3 @@
-/* Étapes du parcours, affichées comme des quêtes dans la frise chronologique */
-/* status: "completed" (quête terminée) ou "ongoing" (quête en cours) */
 export const parcours = [
     {
         date: "2020 – 2021",
@@ -61,7 +59,7 @@ export const parcours = [
                     text: "Mise en place de tests unitaires et fonctionnels avec Jest et Cypress."
                 },
             ],
-            stack: ["Node.js", "React", "MongoDB", "Express.js", "Material UI", "Jest", "Cypress", "Gitlab"]
+            stack: ["Node.js", "TypeScript", "React", "MongoDB", "Express.js", "Material UI", "Jest", "Cypress", "Gitlab"]
         }
     },
     {
@@ -93,7 +91,7 @@ export const parcours = [
                     text: "Thème fait main en CSS pur : dégradés or, ombres portées, police médiévale, sans librairie de composants (les icônes viennent de FontAwesome)."
                 }
             ],
-            stack: ["React", "CSS3", "Font Awesome"]
+            stack: ["React", "CSS", "Font Awesome"]
         }
     },
     {
@@ -145,7 +143,7 @@ export const parcours = [
                     text: "Des titres à débloquer selon les accomplissements du joueur, affichables sur son profil."
                 }
             ],
-            stack: ["Node.js", "Discord.js", "Supabase", "Hetzner (VPS Linux)"]
+            stack: ["Node.js", "Discord.js", "PostgreSQL", "Hetzner (VPS Linux)"]
         }
     }
 ]

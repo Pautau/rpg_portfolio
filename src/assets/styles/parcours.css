@@ -35,7 +35,6 @@
     padding-bottom: 0;
 }
 
-/* La ligne verticale reliant les quêtes */
 .parcours-step:not(:last-child)::before {
     content: "";
     position: absolute;

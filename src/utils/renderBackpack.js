@@ -1,11 +1,10 @@
-/* Number of stars per rarity */
 const Rarity = {
     COMMON: 1,
     UNCOMMON: 2,
     RARE: 3,
 }
 
-// TODO: Might limit backpack's slot to 9
+// TODO: Might limit backpack's slot to 9 (jen ai plus besoin mais je laisse ça ici)
 const backpack = [
     {
         name: "Kitten",
@@ -17,8 +16,6 @@ const backpack = [
 ]
 
 let backpackElement = document.getElementsByClassName('backpack')[0]
-
-console.log(backpackElement)
 
 backpack.forEach(item => {
     

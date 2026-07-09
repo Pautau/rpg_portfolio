@@ -269,28 +269,23 @@ body:after {
     }
 }
 
-/* Tablettes (600px à 768px) */
-@media (max-width: 768px) {
-
-}
-
 /* Petits Écrans d'Ordinateurs Portables (768px à 1024px) */
 @media (max-width: 1024px) {
     html {
-        font-size: 19px; /* Augmente la taille de la police */
+        font-size: 19px;
     }
 }
 
 /* Écrans d'Ordinateurs de Bureau (1024px à 1440px) */
 @media (min-width: 1024px) and (max-width: 1440px) {
     html {
-        font-size: 20px; /* Augmente encore la taille de la police */
+        font-size: 20px; 
     }
 }
 
 /* Grands Écrans (au-dessus de 1440px) */
 @media (min-width: 1440px) {
     html {
-        font-size: 20px; /* Taille de police plus grande pour grands écrans */
+        font-size: 20px;
     }
 }

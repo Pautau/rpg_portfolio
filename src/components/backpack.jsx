@@ -57,11 +57,11 @@ function Backpack() {
                 ))}
             </div>
 
-            {/*  */}
+            {}
 
             <div className="tooltip">
                 <div className="rarity">
-                    {/* immediately invoked function expression*/}
+                    {}
                     {(() => {
                         const elements = [];
                         for (let i = 0; i < tooltipData.rarity; i++) {

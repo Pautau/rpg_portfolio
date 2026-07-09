@@ -7,6 +7,7 @@ import Skills from './components/skills';
 import Parcours from './components/parcours';
 import About from './components/about';
 
+// Todo : au tout début du projet j'ai dév avec des commentaires en anglais, c'est certes une bonne pratique mais vu que les commentaires me regardent juste, je n'ai pas besoin de les laisser en anglais.
 function App() {
     const [selectedMenu, setSelectedMenu] = useState('About');
     const [entranceDone, setEntranceDone] = useState(false);
