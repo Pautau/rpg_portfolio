@@ -3,68 +3,74 @@ import { Rarity } from '../enums/rarity.js';
 /* Items in inventory */
 export const inventory = [
     {
-        name: "Coffee",
-        quote: "The only true source of energy for developers",
-        stats: "+10 debugging skills, +5 focus",
+        name: "Café",
+        quote: "La seule véritable source d'énergie des développeurs",
+        stats: "+10 en debug, +5 en concentration",
         image: "fas fa-coffee",
         rarity: Rarity.EPIC
     },
     {
-        name: "Kitten",
-        quote: "Who would even bring a cat to work?",
-        stats: "+10 sanity, -2 focus",
+        name: "Chaton",
+        quote: "Qui emmène un chat au travail, sérieusement ?",
+        stats: "+10 en joie, -2 en concentration",
         image: "fas fa-cat",
         rarity: Rarity.RARE
     },
+    // { // J'ai perdu l'accès à la version premium de FontAwesome, plutôt que de laisser l'icône invisible, j'ai préféré la supprimer.
+    //     name: "Canard en caoutchouc",
+    //     quote: "Silencieux mais plein de sagesse.",
+    //     stats: "+5 en debug, +3 en joie",
+    //     image: "fas fa-duck",
+    //     rarity: Rarity.RARE
+    // },
     {
-        name: "Rubber Duck",
-        quote: "Silent but insightful.",
-        stats: "+5 debugging skills, +3 sanity",
-        image: "fas fa-duck",
-        rarity: Rarity.RARE
-    },
-    {
-        name: "Headphones",
-        quote: "Especially useful in open-space",
-        stats: "+2 focus",
+        name: "Casque",
+        quote: "Particulièrement utile en open space",
+        stats: "+2 en concentration",
         image: "fas fa-headphones",
         rarity: Rarity.UNCOMMON
     },
     {
         default: true,
-        name: "Laptop",
-        quote: "Your trusty companion for turning coffee into code",
-        stats: "Allows the user to code",
+        name: "Ordinateur portable",
+        quote: "Ton fidèle compagnon pour transformer du café en code",
+        stats: "Permet à l'utilisateur de développer",
         image: "fas fa-laptop",
         rarity: Rarity.UNCOMMON
     },
     {
-        name: "Mouse",
-        quote: "Mostly useless if you're a Vim user",
-        stats: "Allows the user to missclick",
+        name: "Souris",
+        quote: "Presque inutile si tu utilises Vim",
+        stats: "Permet à l'utilisateur de merge un vendredi soir",
         image: "fas fa-mouse",
         rarity: Rarity.UNCOMMON
     },
-
     {
-        name: "Tissue",
-        quote: "For wiping away tears of joy after fixing bugs",
+        name: "Boîte de mouchoirs",
+        quote: "Pour essuyer les larmes de joie après avoir corrigé un bug",
         stats: "",
         image: "fas fa-box-tissue",
         rarity: Rarity.COMMON
     },
     {
-        name: "Keys",
-        quote: "Doesn't grant access to backend servers",
+        name: "Clés",
+        quote: "Celles ci ne donnent pas accès aux serveurs de production",
         stats: "",
         image: "fas fa-key",
         rarity: Rarity.COMMON
     },
-    {
-        name: "Empty",
+        {
+        name: "Emplacement vide",
         quote: "",
         stats: "",
-        image: "fa-solid fa-crystal-ball",
+        image: "",
+        rarity: ""
+    },
+        {
+        name: "Emplacement vide",
+        quote: "",
+        stats: "",
+        image: "",
         rarity: ""
     }
-]
+];

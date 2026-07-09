@@ -108,13 +108,15 @@ body:after {
     grid-area: menu;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
 
     background-color: rgba(0, 0, 0, 0.356);
     color: antiquewhite;
 
-    padding: 0 10vw;
+    padding: 0 1rem;
 }
 
 .menu p {
@@ -146,7 +148,7 @@ body:after {
 .character {
     grid-area: character;
 
-    background: url('../images/character.png'), var(--main-bg);
+    background: var(--main-bg);
     background-size: cover;
 
     position: relative;
@@ -166,7 +168,7 @@ body:after {
 }
 
 .light {   
-    background: radial-gradient(circle, rgba(0, 195, 255, 0.247) 0%, rgba(150,150,150,0) 100%);
+    background: radial-gradient(circle, rgba(255, 230, 0, 0.815) 0%, rgba(150,150,150,0) 100%);
     animation: glow 4s 0s infinite alternate;
 
     width: 100%;
@@ -178,7 +180,7 @@ body:after {
         opacity: 0.1;
     }
     50% {
-        opacity: 0.7;
+        opacity: 0.4;
     }
     100% {
         opacity: 0.1;
@@ -220,6 +222,7 @@ body:after {
     grid-area: informations;
 
     display: grid;
+    min-height: 0;
 
     background: url('../images/background/bg_information.png');
     background-size: cover;
@@ -239,12 +242,6 @@ body:after {
 
     .character, .title {
         display: none;
-    }
-
-    .informations {
-        background: url('../images/character2.png'), url('../images/background/bg_information.png');
-        background-position: center;
-        background-size: cover;
     }
 }
 

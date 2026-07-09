@@ -3,13 +3,12 @@ import './assets/styles/general.css';
 import './assets/styles/reset.css';
 import Backpack from './components/backpack';
 import Passives from './components/passives';
+import Skills from './components/skills';
+import Parcours from './components/parcours';
+import About from './components/about';
 
 function App() {
     const [selectedMenu, setSelectedMenu] = useState('Backpack');
-    // TODO: Allow to change background when clicking on the button_background button
-    // const changeVariable = () => {
-    //     document.getElementsByClassName('character')[0].style.backgroundImage = "url('../images/background/bg2.png')";
-    //   };
 
     return (
         <div className="container">
@@ -19,25 +18,33 @@ function App() {
                     <p>Florian's Portfolio</p>
                 </div>
                 <div className="menu">
-                    {/* <p><i className="fa-solid fa-arrow-left"></i></p> */}
+                    <p
+                        className={selectedMenu === 'About' ? 'active' : ''}
+                        onClick={() => setSelectedMenu('About')}>À propos</p>
+                    <p
+                        className={selectedMenu === 'Skills' ? 'active' : ''}
+                        onClick={() => setSelectedMenu('Skills')}>Compétences</p>
+                    <p
+                        className={selectedMenu === 'Parcours' ? 'active' : ''}
+                        onClick={() => setSelectedMenu('Parcours')}>Parcours</p>
                     <p
                         className={selectedMenu === 'Backpack' ? 'active' : ''}
-                        onClick={() => setSelectedMenu('Backpack')}>Backpack</p>
+                        onClick={() => setSelectedMenu('Backpack')}>Inventaire</p>
 
-                    <p className={selectedMenu === 'Passives' ? 'active' : ''}
-                        onClick={() => setSelectedMenu('Passives')}>Passives</p>
-                    {/* <p><i className="fa-solid fa-arrow-right"></i></p> */}
+                    {/* <p className={selectedMenu === 'Passives' ? 'active' : ''}
+                        onClick={() => setSelectedMenu('Passives')}>Passives</p> */}
                 </div>
                 <div className="character">
                     <div className="light"></div>
-                    {/* <i 
-                        className="fas fa-image button_background"
-                        onClick={changeVariable}
-                    ></i> */}
                 </div>
                 <div className="informations">
+
+                    {selectedMenu === 'Skills' && <Skills />}
+                    {selectedMenu === 'Parcours' && <Parcours />}
                     {selectedMenu === 'Backpack' && <Backpack />}
-                    {selectedMenu === 'Passives' && <Passives />}
+                    {selectedMenu === 'About' && <About />}
+                    {/* {selectedMenu === 'Passives' && <Passives />} */}
+
                 </div>
             </div>
         </div>

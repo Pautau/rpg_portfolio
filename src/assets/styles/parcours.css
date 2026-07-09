@@ -1,0 +1,348 @@
+.parcours {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.parcours::-webkit-scrollbar {
+    width: 6px;
+}
+
+.parcours::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.parcours::-webkit-scrollbar-thumb {
+    background: linear-gradient(#8A6E2F, #5d4a1f);
+    border-radius: 3px;
+}
+
+.parcours-step {
+    display: flex;
+    gap: 0.9rem;
+
+    position: relative;
+    padding-bottom: 1.3rem;
+}
+
+.parcours-step:last-child {
+    padding-bottom: 0;
+}
+
+/* La ligne verticale reliant les quêtes */
+.parcours-step:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: 1.9rem;
+    left: 0.95rem;
+    bottom: 0;
+
+    width: 2px;
+    background: linear-gradient(to bottom, #8A6E2F, rgba(138, 110, 47, 0.2));
+}
+
+.parcours-node {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    position: relative;
+    z-index: 1;
+
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+
+    box-shadow: inset 2px 2px 6px rgba(58, 31, 15, 0.6), 0 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.parcours-step.completed .parcours-node {
+    background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+
+.parcours-step.ongoing .parcours-node {
+    background-image: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    animation: glow-node 2.5s 0s infinite alternate;
+}
+
+@keyframes glow-node {
+    0% {
+        box-shadow: inset 2px 2px 6px rgba(58, 31, 15, 0.6), 0 0 2px 2px rgba(51, 139, 147, 0.3);
+    }
+    100% {
+        box-shadow: inset 2px 2px 6px rgba(58, 31, 15, 0.6), 0 0 8px 2px rgba(51, 139, 147, 0.7);
+    }
+}
+
+.parcours-node i {
+    font-size: 0.8rem;
+    color: #180e09;
+}
+
+.parcours-content {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 0.15rem;
+}
+
+.parcours-date {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: antiquewhite;
+    opacity: 0.75;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.parcours-title {
+    margin: 0.15rem 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: antiquewhite;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.parcours-desc {
+    margin: 0;
+    font-size: 0.8rem;
+    color: antiquewhite;
+    opacity: 0.85;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.parcours-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+
+    margin-top: 0.4rem;
+}
+
+.parcours-badge {
+    background-color: rgba(51, 139, 147, 0.35);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    color: rgb(182, 244, 146);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(51, 139, 147, 0.6);
+}
+
+.parcours-info-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    background-color: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(138, 110, 47, 0.6);
+    border-radius: 3px;
+    padding: 0.15rem 0.6rem;
+
+    font-size: 0.7rem;
+    font-family: inherit;
+    color: antiquewhite;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+
+    transition: all 0.15s;
+}
+
+.parcours-info-btn:hover {
+    background-color: rgba(138, 110, 47, 0.4);
+    border-color: rgba(253, 185, 49, 0.8);
+}
+
+.parcours-info-btn i {
+    font-size: 0.75rem;
+}
+
+/* --- POP-UP --- */
+
+.parcours-modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.parcours-modal {
+    position: relative;
+
+    background: linear-gradient(rgba(10, 6, 4, 0.72), rgba(10, 6, 4, 0.72)), url("../images/background/bg_menu.png");
+    background-size: cover;
+    box-shadow: 0 0 0 2px rgba(138, 110, 47, 0.7), 0 10px 30px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+
+    padding: 1.5rem;
+    max-width: 480px;
+    max-height: 85%;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.parcours-modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.parcours-modal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.parcours-modal::-webkit-scrollbar-thumb {
+    background: linear-gradient(#8A6E2F, #5d4a1f);
+    border-radius: 3px;
+}
+
+.parcours-modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    font-size: 1.1rem;
+    color: antiquewhite;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.parcours-modal-close:hover {
+    color: rgb(253, 185, 49);
+}
+
+.parcours-modal-title {
+    margin: 0 1.5rem 0.7rem 0;
+    font-family: 'kingthings_petrockregular', sans-serif;
+    font-size: 1.1rem;
+
+    color: transparent;
+    background-clip: text;
+    background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    background-size: 200% 200%;
+    filter: drop-shadow(1px 1px 1px #000000);
+}
+
+.parcours-modal-text {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: antiquewhite;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.parcours-modal-intro {
+    margin: 0 0 1rem 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: antiquewhite;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.parcours-modal-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    margin-bottom: 1.1rem;
+}
+
+.parcours-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.parcours-feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 5px rgba(58, 31, 15, 0.6);
+}
+
+.parcours-feature-icon i {
+    font-size: 0.85rem;
+    color: rgb(253, 185, 49);
+    filter: drop-shadow(1px 1px 1px #000000);
+}
+
+.parcours-feature-title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: antiquewhite;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.parcours-feature-desc {
+    margin: 0.1rem 0 0 0;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: antiquewhite;
+    opacity: 0.85;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.parcours-modal-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(138, 110, 47, 0.5);
+}
+
+.parcours-stack-chip {
+    padding: 0.15rem 0.55rem;
+    border-radius: 3px;
+    border: 1px solid rgba(138, 110, 47, 0.6);
+    background-color: rgba(0, 0, 0, 0.35);
+
+    font-size: 0.68rem;
+    color: antiquewhite;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 600px) {
+    .parcours-title {
+        font-size: 0.85rem;
+    }
+
+    .parcours-desc {
+        font-size: 0.75rem;
+    }
+}
